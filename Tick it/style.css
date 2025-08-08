@@ -1,0 +1,170 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Orbitron', sans-serif;
+  height: 100vh;
+  background: #0e0e0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  color: #e0ffe7;
+}
+
+/* Neon Background Element */
+.neon-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 30%, #004d3c33, #000);
+  z-index: -1;
+}
+
+/* Container */
+.cyber-container {
+  background-color: #111;
+  border: 1px solid #2aff91;
+  border-radius: 20px;
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 20px #00ffae44;
+  z-index: 1;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #2aff91;
+  text-shadow: 0 0 10px #2aff91;
+}
+
+/* Input Section */
+.input-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1 1 65%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #2aff91;
+  background-color: #0e0e0e;
+  color: #e0ffe7;
+  outline: none;
+  transition: 0.3s;
+  box-shadow: inset 0 0 8px #2aff9150;
+}
+
+input[type="text"]::placeholder {
+  color: #66ffb2;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 10px #2aff91;
+}
+
+/* Button */
+button {
+  padding: 12px 20px;
+  background-color: #2aff91;
+  color: #0e0e0e;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #2aff91;
+}
+
+button:hover {
+  background-color: #1bbf70;
+  box-shadow: 0 0 15px #2aff91, 0 0 5px #2aff91 inset;
+}
+
+/* Task List */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px dashed #2aff9166;
+  gap: 10px;
+  color: #e0ffe7;
+}
+
+/* Task Text */
+li span {
+  flex: 1;
+  word-break: break-word;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #66ffb2;
+}
+
+/* Complete Button */
+li button:first-child {
+  background: transparent;
+  color: #2aff91;
+  font-size: 1.4rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+li button:first-child:hover {
+  color: #14e074;
+}
+
+/* Remove Button */
+.remove-btn {
+  background: #ff2a5a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 0 8px #ff2a5a55;
+}
+
+.remove-btn:hover {
+  background: #c80033;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .input-container {
+    flex-direction: column;
+  }
+
+  input[type="text"],
+  button {
+    width: 100%;
+  }
+}
